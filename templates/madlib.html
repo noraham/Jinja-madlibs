@@ -8,7 +8,10 @@
 <h1>Here's your madlib:</h1>
 
 <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.</p>
-<p>When {{ name }} went to pick it up, it burst into flames in a totally {{ adjective }} way. {{ name }} was very sad, and drank all the {{ bev }}.</p>
+<p>When {{ name }} went to pick it up, it burst into flames in a totally {{ adjective }} way. {{ name }} was very sad, and drank all the {{ bev }} and ordered 100
+{% for topping in pizza %}
+    {{topping}}
+{% endfor %} pizzas.</p>
 <p><a href="/game">play again</a></p>
 
 </body>

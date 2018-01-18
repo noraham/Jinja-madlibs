@@ -1,0 +1,17 @@
+body {
+    background-color: #E6E6FA;
+
+    /*background-repeat: no-repeat;*/
+}
+
+p {
+    color: red;
+}
+
+h1 {
+    background-image: url("https://media.giphy.com/media/1108D2tVaUN3eo/giphy.gif");
+    height: 240px;
+    color: white;
+    font-size: 500%;
+    margin: 0;
+}

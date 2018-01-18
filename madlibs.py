@@ -16,6 +16,7 @@ AWESOMENESS = [
 
 TOPPINGS = ['Pepperoni', 'Mushroom', 'Olive', 'Onion', 'Truffle oil', 'Pineapple']
 
+
 @app.route('/')
 def start_here():
     """Display homepage."""
@@ -64,7 +65,9 @@ def show_madlib():
     noun = request.args.get("noun")
     adj = request.args.get("adjective")
     bev = request.args.get("bev")
-    pizza = request.args.get("pizza")
+    pizza = request.args.getlist("pizza")
+    # for i, each in enumerate(pizza):
+    #     pizza[i] = each.lower()
     print pizza
 
     return render_template('madlib.html',
@@ -72,7 +75,8 @@ def show_madlib():
                            color=col,
                            noun=noun,
                            adjective=adj,
-                           bev=bev)
+                           bev=bev,
+                           pizza=pizza)
 
 if __name__ == '__main__':
     # Setting debug=True gives us error messages in the browser and also

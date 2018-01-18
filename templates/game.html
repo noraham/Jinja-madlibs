@@ -2,6 +2,12 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="/static/madlibs.css">
+<!--    <style>
+        p {
+            color: red;
+        }
+    </style> -->
     <title>Madlib</title>
 </head>
 <body>
@@ -22,12 +28,7 @@
 
         <p>Create your perfect pizza:</p>
             {% for topping in toppings %}
-            <label><input type="checkbox" name="pizza" value={{ topping }}>{{ topping }}</label>
-            <!-- <label><input type="checkbox" name="pizza" value="mushroom">Mushroom</label>
-            <label><input type="checkbox" name="pizza" value="olive">Olive</label>
-            <label><input type="checkbox" name="pizza" value="onion">Onion</label>
-            <label><input type="checkbox" name="pizza" value="truffle oil">Truffle oil</label>
-            <label><input type="checkbox" name="pizza" value="pineapple">Pineapple</label> -->
+            <label><input type="checkbox" name="pizza" value="{{ topping }}">{{ topping }}</label>
             {% endfor %}
 
         <p><input type="submit" value="let's get silly!"></p>
