@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Madlib</title>
+</head>
+<body>
+    <h1>The Madlib Game!</h1><br>
+    <form action='/madlib'>
+        <p>Please enter the following</p>
+        <p>Name of a person: <input type="text" name="name"></p>
+        <p>A color: <input type="text" name="color"></p>
+        <p>A noun: <input type="text" name="noun"></p>
+        <p>An adjective: <input type="text" name="adjective"></p>
+
+        <p>Choose a beverage: </p>
+            <label><input type="radio" name="bev" value="kool-aid">Kool-Aid</label>
+            <label><input type="radio" name="bev" value="cold brews">Cold Brews</label>
+            <label><input type="radio" name="bev" value="spicy margaritas">Spicy Margarita</label>
+            <label><input type="radio" name="bev" value="grape juice">Grape Juice</label>
+            <label><input type="radio" name="bev" value="red wine">Red Wine</label>
+
+        <p>Create your perfect pizza:</p>
+            {% for topping in toppings %}
+            <label><input type="checkbox" name="pizza" value={{ topping }}>{{ topping }}</label>
+            <!-- <label><input type="checkbox" name="pizza" value="mushroom">Mushroom</label>
+            <label><input type="checkbox" name="pizza" value="olive">Olive</label>
+            <label><input type="checkbox" name="pizza" value="onion">Onion</label>
+            <label><input type="checkbox" name="pizza" value="truffle oil">Truffle oil</label>
+            <label><input type="checkbox" name="pizza" value="pineapple">Pineapple</label> -->
+            {% endfor %}
+
+        <p><input type="submit" value="let's get silly!"></p>
+    </form>
+</body>
+</html>
